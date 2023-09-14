@@ -1,15 +1,18 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+import flash from "@/mixins/flash";
+
+export default {
+  mixins: [flash]
 }
-</style>
+
+
+</script>
+
+<template>
+  <main>
+    <p>
+      <button @click="flash('About page')">Click me</button>
+    </p>
+  </main>
+</template>

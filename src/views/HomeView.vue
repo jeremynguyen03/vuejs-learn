@@ -1,9 +1,21 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import TheWelcome from '@/components/TheWelcome.vue';
+
+let message = $ref('Hello world');
+
+setTimeout(() => {
+  message = 'Jeremy nguyen'
+}, 2000)
+
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <TheWelcome/>
+    <p>{{ message }}</p>
+    <p>
+      <input type="text" v-model="message">
+    </p>
   </main>
 </template>
