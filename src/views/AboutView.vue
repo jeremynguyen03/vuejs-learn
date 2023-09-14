@@ -1,10 +1,8 @@
-<script>
+<script setup>
 
-import flash from "@/mixins/flash";
+import {useFlash} from "@/composables/useFlash";
 
-export default {
-  mixins: [flash]
-}
+let {flash} = useFlash();
 
 
 </script>
